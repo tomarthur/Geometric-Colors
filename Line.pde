@@ -1,7 +1,7 @@
-class Line extends BaseShape{ // tells circle that it's based off of BaseShape
+class Line extends BaseShape { // tells circle that it's based off of BaseShape
 
-  PVector size;
-  color c;
+    PVector size;
+    color c;
 
   Line(float _x, float _y, float _x1, float _x2, color _c) {
     super(new PVector(_x, _y), 0, 0, 0, 0, _c);

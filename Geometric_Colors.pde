@@ -1,6 +1,6 @@
 /*
 
-ICM & Visual Language Week 6 Homework
+ ICM & Visual Language Week 6 Homework
  
  ///ICM///
  > using ArrayLists
@@ -43,12 +43,12 @@ void setup () {
   smooth();
   colorMode(HSB, 360, 100, 100); //didn't work correctly until processing was told what the max values for HSB were
   background(0);
-  
+
   strokeWeight(0.5);
   //  noStroke();
-  
+
   geometric = new ArrayList();       //array list for shapes;
-  
+
 
   for (int i = 0; i < 2; i++) {     //add new squares to ArrayList
     geometric.add(new Square(0, 0, 600-(i*40), color(hue, saturation, brightness)));
@@ -72,17 +72,14 @@ void draw () {
       int q = 0;
       geometric.remove(q);
       q++;
-            
     }
- 
   }
- 
+
 
   theta+=0.01;
   // intialize & draw info bar
   infobar = new InfoBar(300, 600, 600, 20, color(0, 0, 0, 188), hueC, saturationC, brightnessC);
   infobar.draw();
-
 }
 
 
@@ -114,7 +111,7 @@ void keyPressed() {
       }
     }
   }
-  
+
   if (key == 'h') {                   //toggle hue mode on/off
     hueC = !hueC;
     println(hueC);
@@ -125,13 +122,13 @@ void keyPressed() {
   else if (key == 'b') {              //toggle brightness mode on/off
     brightnessC = !brightnessC;
   }
-  else if (keyCode == DELETE || keyCode == BACKSPACE){  //backspace to clear stuff out
+  else if (keyCode == DELETE || keyCode == BACKSPACE) {  //backspace to clear stuff out
     for (int i = 0; i < geometric.size(); i++)
-      {    
-           geometric.remove(i);
-           c = 0;
-           background(0);
-      }
+    {    
+      geometric.remove(i);
+      c = 0;
+      background(0);
+    }
   }
   else if (key == 'r') {                   //build squares
     geometric.add(new Square(0, 0, 600-(c*20), color(hue, saturation, brightness))); //make a new shape
@@ -148,19 +145,6 @@ void keyPressed() {
   else if (key == 'l') {            //build lines
     geometric.add(new Line(0, 0, 300-(c*50), 300-(c*50), color(hue, saturation, brightness)));   
     c++;
+  }
 }
-}
-
-
-
-//// not sure where to put this
-//
-//    if (hueC == true) {
-//     if(hue >= 360) //if hue gets higher than max, return it to 0
-//     {
-//       hue = 0;
-//     }
-//     else {
-//       hue+= (h*2); //if hue is less than max, add to hue
-//     }
 

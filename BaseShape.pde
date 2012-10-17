@@ -17,19 +17,17 @@ class BaseShape { //shape SuperConstructor™
 
   void draw () {
     fill(c);
-//    speed.add(accel);
-      pos.add(speed);
-//    
-    if(pos.x < 0 || pos.x > width)
+    //    speed.add(accel);
+    pos.add(speed);
+    //    
+    if (pos.x < 0 || pos.x > width)
     {
       speed.x *= -1;
     }
-    if(pos.y < 0 || pos.y > width)
+    if (pos.y < 0 || pos.y > width)
     {
       speed.y *= -1;
     }
-    
   }
-  
 }
 

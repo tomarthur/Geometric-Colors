@@ -1,6 +1,6 @@
-class Triangle extends BaseShape{ // tells circle that it's based off of BaseShape
+class Triangle extends BaseShape { // tells circle that it's based off of BaseShape
 
-  float x2, y2, x3, y3;
+    float x2, y2, x3, y3;
 
 
   Triangle(float _x1, float _y1, float _x2, float _y2, float _x3, float _y3, color _c) {
